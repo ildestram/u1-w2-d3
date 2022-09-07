@@ -1,0 +1,83 @@
+html, body {
+    height:100%;
+}
+/* se io non metto questa prima regola, il container non prende il posto del body */
+
+
+#container {
+    width:100%;
+    height:100%;
+}
+
+
+
+#main-content {
+    margin:0 auto;
+    max-width:500px;
+    height:100%;
+}
+
+.main-section {
+    border:1px solid gray;
+    margin-bottom:20px;
+    height:200px;
+}
+
+.box{
+    background-color: orange;
+    border:1px solid green;
+    margin:10px;
+    height:30px;
+    width:50px;
+}
+
+#row {
+    display:flex;
+    flex-direction: row;
+}
+
+#row .box:first-of-type {
+    flex-grow: 1;
+    max-width:200px;
+}
+
+#row div:nth-of-type(2){
+    flex-grow:1;
+}
+/* questo è il parent delle box --> display:flex prende gli elementi e li mette accanto */
+#column {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#column .box:first-of-type {
+    flex-grow:1;
+
+}
+
+#row-reverse {
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#column-reverse {
+    display:flex;
+    flex-direction: column-reverse;
+}
+
+#wrap-and-media-query {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width:400px) {
+    #wrap-and-media-query{
+        flex-direction: column;
+    }
+
+   
+
+}
