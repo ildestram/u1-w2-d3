@@ -60,8 +60,11 @@ html, body {
     display:flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    
 }
+
+
 
 #column-reverse {
     display:flex;
@@ -71,13 +74,11 @@ html, body {
 #wrap-and-media-query {
     display: flex;
     flex-wrap: wrap;
+    align-items:center;
+    
 }
 
-@media (max-width:400px) {
-    #wrap-and-media-query{
-        flex-direction: column;
-    }
+
 
    
 
-}
